@@ -55,25 +55,3 @@
     border: var(--bubble-border-background);
     background-color: var(--bubble-fill-background)
 }
-
-.scrollbar-container> :nth-child(1)> :not(first-of-type) :not(.ant-avatat) :nth-child(2)> :nth-child(1) :not(first-child) {
-    text-shadow:
-        -2px -2px 0 #000,
-        0 -2px 0 #000,
-        2px -2px 0 #000,
-        2px 0 0 #000,
-        2px 2px 0 #000,
-        0 2px 0 #000,
-        -2px 2px 0 #000,
-        -2px 0 0 #000;
-    font-weight: var(--username-fontweight)
-}
-
-.scrollbar-container> :nth-child(1)> :not(first-of-type)> :not(first-child):not(lastof-type)> :not(span) {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border-radius: 16px;
-    padding: 16px;
-    border: var(--bubble-border-background);
-    background-color: var(--bubble-fill-background)
-}
