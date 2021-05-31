@@ -5,12 +5,16 @@
     --bubble-fill-background: #0a98ac;
     --bubble-border-background: 4px solid #0d2030;
     --avatar-border: 4px solid #0a98ac;
-    --username-fontweight: 900
+    --username-fontweight: 900;
+    --left-flex-direction: row-reverse;
+    --right-flex-direction: row;
+    --left: 4px 0 0 16px;
+    --right: 4px 16px 0 0
 }
 
 .main-container {
     background-color: var(--main-background);
-    border: var(--border-chatlog-background)
+    border: var(--border-chatlog-background);
 }
 
 .main-container span {
@@ -21,8 +25,13 @@
     display: none
 }
 
+.scrollbar-container> :nth-child(1)> :not(first-of-type)> :nth-child(1) {
+    display: flex;
+    flex-direction: var(--left-flex-direction)
+}
+
 .scrollbar-container> :nth-child(1)> :not(first-of-type) .ant-avatar {
-    margin-top: 4px;
+    margin: var(--left);
     flex: 0 0 64px;
     position: relative;
     display: inline-block;
@@ -31,6 +40,20 @@
     line-height: 64px;
     border: var(--avatar-border);
     border-radius: 25%
+}
+
+.scrollbar-container> :nth-child(1)> :not(first-of-type) :not(.ant-avatat) :nth-child(2)> :nth-child(1) :not(first-child) {
+    text-shadow: -2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000, 2px 0 0 #000, 2px 2px 0 #000, 0 2px 0 #000, -2px 2px 0 #000, -2px 0 0 #000;
+    font-weight: var(--username-fontweight)
+}
+
+.scrollbar-container> :nth-child(1)> :not(first-of-type)> :not(first-child):not(lastof-type)> :not(span) {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 16px;
+    padding: 16px;
+    border: var(--bubble-border-background);
+    background-color: var(--bubble-fill-background)
 }
 
 .scrollbar-container> :nth-child(1)> :not(first-of-type) :not(.ant-avatat) :nth-child(2)> :nth-child(1) :not(first-child) {
